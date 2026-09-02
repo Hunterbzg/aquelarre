@@ -1,0 +1,4 @@
+# Defaults to standard library (urllib) for Jina Reader API, so no strict requirements needed.
+# However, if the user wants to run in --use-crawl4ai mode, they need:
+
+crawl4ai>=0.2.73

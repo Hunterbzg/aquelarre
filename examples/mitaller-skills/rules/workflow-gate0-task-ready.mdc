@@ -1,0 +1,22 @@
+---
+description: Enforce Gate 0 and Task readiness before code changes.
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+# Gate 0 obligatorio antes de implementar
+
+Antes de escribir o modificar codigo:
+
+1. Verificar que exista un archivo `TASK-*` en `docs/workflow/tasks/`.
+2. Confirmar que el task tenga AC y clasificacion minima (`type`, `surface`, `risk`).
+3. Si el task no esta en estado `ready`, detener implementacion y solicitar completar gate.
+
+## Excepciones
+
+- Ajustes exclusivamente documentales en `docs/` o en skills del harness (`.cursor/skills/`, `.agents/skills/`).
+
+## Referencia
+
+- `docs/AI_WORKFLOW_SKILLS_SPEC.md` (Gate 0 / Gate 1)

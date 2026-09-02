@@ -1,0 +1,39 @@
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editors / IDE local
+.idea/
+*.swp
+*.swo
+*~
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Node
+node_modules/
+dist/
+coverage/
+.turbo/
+*.log
+
+# Install / local smoke artifacts
+.aquelarre-install.json
+
+# Misc
+*.tmp
+*.temp
+.cache/
