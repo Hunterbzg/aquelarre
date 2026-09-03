@@ -1,47 +1,22 @@
-# Referencia — QA Automation
+# Referencia — QA Automation (router)
 
-## Herramientas por plataforma
+## Mapa
 
-| Plataforma | Automatización | MCP / CLI |
-|------------|------------------|-----------|
-| Flutter mobile | integration_test, Appium | Appium MCP, Mobile MCP, Dart MCP |
-| Flutter tablet | Igual + orientaciones | Appium, simulador tablet |
-| React web | Playwright, Cypress | Chrome DevTools MCP |
-| API | httpx, supertest, Postman | — |
+| Stack | Herramienta Aquelarre | Default industria |
+|-------|----------------------|-------------------|
+| Flutter mobile/tablet | `aquelarre-qa-appium` | Appium (+ MCP) |
+| React Native | `aquelarre-qa-react-native` | **Maestro**; Detox si ya está |
+| React web | Playwright | Playwright |
+| API | skill `dev-*` | pytest / vitest / supertest |
 
-## Estructura evidencia local
+Flutter + Maestro es válido si el repo consumidor lo eligió; el default Aquelarre para Flutter sigue siendo Appium (MCP en el IDE, debug en vivo).
 
-```
-docs/testing/evidence/
-└── TASK-042-login/
-    ├── 01-login-screen.png
-    ├── 02-error-state.png
-    └── notes.md
-```
+## Evidencia
 
-En `notes.md`: pasos, resultado, build/commit probado.
+Ver `docs/testing/EVIDENCE_LOCAL.md`. Nunca versionar PNG/video.
 
-## Plantilla registro en task §9
+## Límites
 
-```markdown
-### QA smoke — TASK-042
-- Herramienta: Appium MCP / Playwright
-- Escenarios: login OK, login error, logout
-- Resultado: PASS
-- Evidencia: `docs/testing/evidence/TASK-042/` (local, no commitear)
-- Build: Bitrise #1234 / commit abc123
-```
-
-## Reproducción de bug
-
-1. Pasos del reporte (numerados)
-2. Expected vs Actual
-3. Entorno (OS, versión app, usuario/rol)
-4. Captura o video del fallo
-5. Test de regresión si se corrige en el mismo task
-
-## Límites del agente
-
-- No acceder a producción sin autorización explícita
-- No commitear credenciales ni capturas con datos sensibles
-- Pedir al humano dispositivo/simulador si MCP no está disponible
+- No producción sin autorización.
+- No credenciales en flows commiteados.
+- Entorno caído = BLOCKED, no FAIL de producto.

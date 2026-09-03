@@ -392,7 +392,7 @@ Prioridad sugerida para integrar en Aquelarre **sin** duplicar el modelo monolí
 
 **No recomendado:**
 
-- Reemplazar los 21 skills de Aquelarre por 4 monolitos (pierde routing granular y paridad mobile/web).
+- Reemplazar los 23 skills de Aquelarre por 4 monolitos (pierde routing granular y paridad mobile/web).
 - Copiar versionado BMAD como está (confunde con TASK-ID y PR traceability).
 - Incluir dominio Kapix/Hacienda en el harness genérico.
 

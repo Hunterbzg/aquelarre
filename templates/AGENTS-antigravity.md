@@ -14,7 +14,7 @@
 
 ## Workflows disponibles
 
-`onboarding.md` · `discovery.md` · `prd.md` · `architecture.md` · `sprint-plan.md` · `implement.md` · `status.md` · `onboarding-backend.md` · `implement-backend.md`
+`onboarding.md` · `discovery.md` · `prd.md` · `architecture.md` · `sprint-plan.md` · `implement.md` · `status.md` · `qa-device.md` · `onboarding-backend.md` · `onboarding-node.md` · `implement-backend.md` · `implement-node.md`
 
 Al invocar un workflow, **leer el archivo completo** y delegar en el skill Aquelarre indicado.
 

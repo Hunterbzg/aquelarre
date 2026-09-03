@@ -75,14 +75,16 @@ description: <Cuándo usar este skill — triggers claros para el agente>
 | `aquelarre-docker` | — (nuevo) | listo |
 | `aquelarre-bitrise` | — (nuevo) | listo |
 | `aquelarre-testing` | testing | listo |
-| `aquelarre-qa-automation` | parcial en testing | listo |
+| `aquelarre-qa-automation` | parcial en testing | listo — router opt-in |
+| `aquelarre-qa-appium` | — (nuevo) | listo |
+| `aquelarre-qa-react-native` | — (nuevo) | listo (Maestro default) |
 | `aquelarre-github` | github | listo |
 | `aquelarre-refactor` | refactor | listo |
 | `aquelarre-doc-crawler` | mitaller-be doc-crawler | listo |
 
 Actualizar la columna **Estado** a `listo` cuando el skill esté en esta carpeta y revisado.
 
-**Total:** 21 skills en catálogo.
+**Total:** 23 skills en catálogo.
 
 ## Orden sugerido de migración
 

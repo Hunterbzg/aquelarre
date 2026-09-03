@@ -101,4 +101,4 @@ notes:
 
 Referencia rapida para `skills_plan` (detalle en SPEC):
 
-`aquelarre-scrum-master` · `aquelarre-po-product` · `aquelarre-ux-mobile` · `aquelarre-ux-tablet` · `aquelarre-ux-web` · `aquelarre-architecture-adr` · `aquelarre-database-postgres` · `aquelarre-supabase` · `aquelarre-dev-flutter` · `aquelarre-dev-fastapi` · `aquelarre-dev-node` · `aquelarre-dev-react` · `aquelarre-testing` · `aquelarre-qa-automation` · `aquelarre-github` · `aquelarre-refactor` · `aquelarre-bitrise` · `aquelarre-docker` · `aquelarre-discovery` · `aquelarre-doc-crawler`
+`aquelarre-scrum-master` · `aquelarre-po-product` · `aquelarre-ux-mobile` · `aquelarre-ux-tablet` · `aquelarre-ux-web` · `aquelarre-architecture-adr` · `aquelarre-database-postgres` · `aquelarre-supabase` · `aquelarre-dev-flutter` · `aquelarre-dev-fastapi` · `aquelarre-dev-node` · `aquelarre-dev-react` · `aquelarre-testing` · `aquelarre-qa-automation` · `aquelarre-qa-appium` · `aquelarre-qa-react-native` · `aquelarre-github` · `aquelarre-refactor` · `aquelarre-bitrise` · `aquelarre-docker` · `aquelarre-discovery` · `aquelarre-doc-crawler`

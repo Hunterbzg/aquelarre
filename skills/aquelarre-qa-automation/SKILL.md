@@ -1,71 +1,65 @@
 ---
 name: aquelarre-qa-automation
-description: Ejecuta pruebas realistas, smoke visual, E2E y reproduccion de bugs. Usa este skill cuando el usuario pida probar como usuario real, risk=high, bugs user-visible, o validacion post-implementacion mas alla de unit tests.
+description: Enruta pruebas realistas opcionales (Appium, Maestro/RN, Playwright). Usa este skill cuando el usuario pida probar como usuario, cubrir muchos casos, validar UX en dispositivo, o reproducir un bug. No es gate ni bloquea Done. Para planes Gate 2 usa aquelarre-testing.
 ---
 
-# QA Automation
+# QA Automation (router)
 
 Fuentes:
 
-- `aquelarre-testing` — plan y evidencia Gate 2 (complementario)
-- `docs/testing/EVIDENCE_LOCAL.md` — politica de capturas locales
-- `reference.md` — herramientas por plataforma
-- MCP: Appium, Mobile MCP, Chrome DevTools (cuando disponibles)
+- `aquelarre-qa-appium` — Flutter / nativo / Appium MCP
+- `aquelarre-qa-react-native` — RN (Maestro default)
+- `reference.md` — mapa de herramientas
+- `docs/testing/EVIDENCE_LOCAL.md`
 
 ## Objetivo
 
-Validar comportamiento en condiciones cercanas al usuario real y reproducir bugs con evidencia trazable.
+Punto de entrada cuando el humano pide **probar de verdad**, no sustituir unit tests.
 
-## Inputs
+Es una **herramienta**. Se puede usar en discovery tardío, desarrollo, QA o debug. **No forma parte de ningún gate.**
 
-- Task con AC, UX spec, pasos de reproducción (bugs).
-- `risk=high` o solicitud explícita del humano.
-- App desplegada, build Bitrise, o entorno local levantado.
+| Qué | Skill |
+|-----|--------|
+| Test plan + evidencia unit/widget/API (Gate 1/2) | `aquelarre-testing` |
+| App Flutter / dispositivo / “pon Appium” | `aquelarre-qa-appium` |
+| App React Native | `aquelarre-qa-react-native` |
+| Web | Playwright / Cypress / Chrome DevTools MCP (este skill, sección web) |
+| API | requests del skill backend, no este |
 
-## Outputs
+## No es gate
 
-- Escenarios ejecutados con resultado PASS/FAIL.
-- Evidencia en `docs/testing/evidence/<TASK-id>/` (gitignored).
-- Registro en task §9 con rutas locales y resumen (sin commitear binarios).
+- No exigir E2E Appium/Maestro para `ready`, PR o Done.
+- `G2-TEST-002` (E2E si `risk=high`) sigue siendo **warning** del skill testing, no un FAIL de Supervisor por falta de Appium.
+- Si el usuario no lo pide, no inventar una suite E2E.
 
-## Gates que aplica
+## Modos (delegar)
 
-- Refuerza **Gate 2** cuando E2E/smoke es requerido por riesgo o UX crítica.
-- **Gate 3:** smoke post-merge bajo demanda del humano.
+| Pedido del humano | Modo | Skill |
+|-------------------|------|--------|
+| “yo pruebo X; cubre el resto” | `explore` | appium o RN |
+| “mira si el flujo se siente bien” | `ux-loop` | appium o RN + UX spec |
+| “reproduce este bug” | `debug` | appium o RN |
+| “smoke web del checkout” | smoke | Playwright (abajo) |
+
+## Web (breve)
+
+- Playwright preferido en greenfield web; Cypress si el repo ya lo usa.
+- MCP Chrome DevTools para inspección puntual.
+- Evidencia igual: `docs/testing/evidence/` gitignored.
 
 ## Instrucciones
 
-1. Derivar escenarios desde AC y UX spec (happy path + casos borde).
-2. Para **bugs**: reproducir pasos exactos; documentar expected vs actual.
-3. Elegir herramienta según `platform`:
-   - **mobile/tablet:** Appium MCP, Mobile MCP, integration tests Flutter
-   - **web:** Playwright/Cypress, Chrome DevTools MCP
-   - **backend:** requests de integración, contract tests
-4. Guardar capturas/video en `docs/testing/evidence/`; **no** versionar en git.
-5. En task §9: PASS/FAIL, herramienta usada, ruta local de evidencia.
-6. Si no se puede automatizar: smoke manual documentado paso a paso con capturas locales.
-7. Coordinar con `aquelarre-bitrise` para validar build verde antes de smoke en dispositivo.
-
-## Cuándo invocar
-
-| Trigger | Acción |
-|---------|--------|
-| `risk=high` + UI | E2E o smoke obligatorio o N/A justificado |
-| Bug user-visible | Repro + regresión |
-| Usuario: "prueba como usuario" | Smoke guiado |
-| Post-implementación crítica | Regresión del flujo |
+1. Identificar plataforma (`package` Flutter vs `react-native` vs web).
+2. Invocar el skill especializado y **seguirlo**.
+3. Guardar capturas solo locales.
+4. Si no hay dispositivo/MCP: BLOCKED + qué necesita el humano — no fingir PASS.
 
 ## Coordinación
 
 | Skill | Rol |
 |-------|-----|
-| `aquelarre-testing` | Test plan y evidencia unit/integration |
-| `aquelarre-bitrise` | Build instalable para mobile |
-| `aquelarre-docker` | Entorno web/API para E2E |
-
-## Artefactos
-
-| Artefacto | Ruta |
-|-----------|------|
-| Evidencia local | `docs/testing/evidence/<TASK-id>/` (gitignored) |
-| Política | `docs/testing/EVIDENCE_LOCAL.md` |
+| `aquelarre-testing` | Gates 1–2 de tests de código |
+| `aquelarre-qa-appium` | Móvil Appium |
+| `aquelarre-qa-react-native` | Móvil RN |
+| `aquelarre-bitrise` | Binario instalable |
+| `aquelarre-docker` | Web/API local para E2E |

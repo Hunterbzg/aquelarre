@@ -37,7 +37,7 @@ chmod +x install/install.sh
 
 | Componente | Destino en el proyecto |
 |------------|------------------------|
-| 21 skills `aquelarre-*` | `.cursor/skills/` y/o `.agents/skills/` |
+| 23 skills `aquelarre-*` | `.cursor/skills/` y/o `.agents/skills/` |
 | Rule Gate 0 | `.cursor/rules/` (Cursor) |
 | Plantillas | `templates/` |
 | Spec workflow | `docs/AI_WORKFLOW_SKILLS_SPEC.md` (si no existe) |

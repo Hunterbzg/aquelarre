@@ -20,7 +20,7 @@ Harness portable de agentes de IA para unificar el workflow de desarrollo en tod
 
 ```
 aquelarre/
-├── skills/          ← fuente canónica de skills (20 skills listos)
+├── skills/          ← fuente canónica de skills (23 skills listos)
 ├── docs/            ← visión, spec workflow, inventarios
 ├── templates/       ← plantillas TASK, ADR, UX, DISCOVERY, …
 ├── rules/           ← rules Cursor (Gate 0)
@@ -31,7 +31,7 @@ aquelarre/
 
 ## Documentación
 
-- **[Skills (fuente canónica)](skills/README.md)** — 20 skills `aquelarre-*` listos para instalar.
+- **[Skills (fuente canónica)](skills/README.md)** — 23 skills `aquelarre-*` listos para instalar.
 - **[Visión y contexto completo](docs/VISION.md)** — Documento maestro del harness.
 - **[Spec del workflow](docs/AI_WORKFLOW_SKILLS_SPEC.md)** — Gates, routing, apéndices YAML.
 - **[Instalador](install/README.md)** — `.\install\install.ps1 -Dest <ruta-proyecto> -Ide all`

@@ -7,7 +7,7 @@ Comparación entre el modelo **mitaller-be** (comandos `/discovery`, workflows e
 | Aspecto | mitaller-be | Aquelarre (decisión) |
 |---------|-------------|----------------------|
 | Entrada al pipeline | Comandos `/onboarding`, `/discovery`, … | Skill por intención + routing YAML (Apéndice A) |
-| Agentes | 4 monolitos (product, coding, orchestrator, doc-crawler) | 21 skills `aquelarre-*` |
+| Agentes | 4 monolitos (product, coding, orchestrator, doc-crawler) | 23 skills `aquelarre-*` |
 | Procedimientos | `.agents/workflows/*.md` (7 archivos) | `templates/workflows/` + skills |
 | Routing | Implícito en AGENTS.md + secuencia fija | Explícito: etiquetas → `skills_plan` |
 | Artefactos | `docs/sprints/sprint-NNN/tasks/` | `docs/workflow/tasks/` (centralizado) |
@@ -18,7 +18,7 @@ Comparación entre el modelo **mitaller-be** (comandos `/discovery`, workflows e
 
 1. **Pierde paridad mobile/web/backend** — un solo `coding-agent` no distingue Flutter, React, FastAPI.
 2. **Secuencia rígida** — `/prd` → `/architecture` no cubre spikes, chores, refactors opt-in.
-3. **4 skills vs 21** — el routing granular del SPEC ya resuelve “qué skill invocar” por `type`, `platform`, `risk`, etc.
+3. **4 skills vs 23** — el routing granular del SPEC ya resuelve “qué skill invocar” por `type`, `platform`, `risk`, etc.
 4. **Versionado BMAD** — incompatible con trazabilidad TASK-ID + PR.
 
 ## Mapeo comando → skill Aquelarre
@@ -32,6 +32,7 @@ Comparación entre el modelo **mitaller-be** (comandos `/discovery`, workflows e
 | `/sprint-plan` | `aquelarre-scrum-master` | 1→2 | `templates/workflows/sprint-plan.md` |
 | `/implement` | Dev skill por `platform` + `aquelarre-testing` | 2→3 | `templates/workflows/implement.md` |
 | `/status` | `aquelarre-workflow-orchestration` | — | `templates/workflows/status.md` |
+| `/qa-device` (opt-in) | `aquelarre-qa-appium` / `aquelarre-qa-react-native` | **ninguno** | `templates/workflows/qa-device.md` |
 | (crawl docs) | `aquelarre-doc-crawler` | — | skill directo |
 
 ### `/implement` por plataforma

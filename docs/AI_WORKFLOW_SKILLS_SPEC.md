@@ -325,7 +325,9 @@ Skills en `skills/aquelarre-<nombre>/` — prefijo `aquelarre-` en el frontmatte
 | `aquelarre-docker` | Contenedores (web/backend) |
 | `aquelarre-bitrise` | CI/CD móvil/tablet (Flutter) |
 | `aquelarre-testing` | Test plan, evidencia Gate 2 |
-| `aquelarre-qa-automation` | E2E, smoke, reproducción de bugs |
+| `aquelarre-qa-automation` | Router E2E/smoke/repro (opt-in, no gate) |
+| `aquelarre-qa-appium` | Appium móvil (Flutter/nativo), opt-in |
+| `aquelarre-qa-react-native` | Maestro/Detox RN, opt-in |
 | `aquelarre-github` | Branch, PR, merge, trazabilidad |
 | `aquelarre-refactor` | Refactor opt-in con regresión |
 | `aquelarre-doc-crawler` | Archivar documentación de APIs/sitios externos |
@@ -680,7 +682,7 @@ Reglas de linking (condicional):
 - **G2-ART-001 (warning)**: si se generaron PRD/UX/ADR/TEST separados, todos deben estar linkeados desde el Task (o declarar `N/A`).
 
 Reglas Testing (condicional):
-- **G2-TEST-002 (warning)**: si `risk=high`, se recomienda evidencia adicional (integration/E2E o explicación del porqué no).
+- **G2-TEST-002 (warning)**: si `risk=high`, se recomienda evidencia adicional de **integration** (o explicación del porqué no). Appium/Maestro/Playwright de dispositivo son **opt-in** (`aquelarre-qa-*`); no convierten este warning en blocker ni en requisito de Done.
 - **G2-ARCHTEST-001 (warning)**: si `type=refactor` o cambió estructura, incluir evidencia de “tests de arquitectura” (o declarar `N/A` y por qué).
 
 #### Gate 3 — Done / Merged

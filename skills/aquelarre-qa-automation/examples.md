@@ -1,28 +1,13 @@
-# Ejemplos — QA Automation
+# Ejemplos — Router QA
 
-## Escenario smoke mobile
+## “Prueba como usuario”
 
-```markdown
-1. Abrir app en build Bitrise #1234
-2. Tap "Iniciar sesión"
-3. Ingresar credenciales test
-4. Verificar pantalla Home — PASS
-Evidencia: docs/testing/evidence/TASK-010/smoke-home.png
-```
+→ Detectar Flutter → `aquelarre-qa-appium` modo `explore`.
 
-## Bug repro
+## “Reproduce el crash al guardar perfil”
 
-```markdown
-## Reproducción
-1. Ir a Configuración > Perfil
-2. Tap Guardar sin nombre
-**Expected:** mensaje "Nombre requerido"
-**Actual:** pantalla en blanco
-**Evidencia:** TASK-088/repro-blank.png
-```
+→ `aquelarre-qa-appium` o RN Maestro, modo `debug`.
 
-## N/A justificado
+## “E2E obligatorio para el PR”
 
-```markdown
-E2E: N/A — chore interno en script CI; sin superficie UI; unit tests cubren el cambio.
-```
+→ Explicar que **no es gate**; ofrecer Appium/Maestro opt-in. Gate 2 = `aquelarre-testing` (unit/widget).

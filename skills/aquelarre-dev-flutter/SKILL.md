@@ -67,7 +67,8 @@ Implementar el scope del task con calidad verificable, sin expandir alcance ni s
 | UX antes de UI | `aquelarre-ux-mobile` / `aquelarre-ux-tablet` |
 | Supabase / RLS | `aquelarre-supabase` |
 | Schema DB | `aquelarre-database-postgres` |
-| Tests / evidencia | `aquelarre-testing` |
+| Tests / evidencia Gate 2 | `aquelarre-testing` |
+| Appium / UX en dispositivo (opt-in) | `aquelarre-qa-appium` |
 | PR / merge | `aquelarre-github` |
 | CI mobile | `aquelarre-bitrise` (cuando exista) |
 

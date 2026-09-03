@@ -9,7 +9,7 @@
 | Unit | Logica de dominio, validaciones, parsers |
 | Widget | Pantallas con estados UI y acciones |
 | Integration | Flujos multi-pantalla, navegacion |
-| E2E / smoke | `risk=high`, auth, pagos, flujos criticos de negocio |
+| E2E / smoke (opt-in) | Si el humano pide Appium/dispositivo — skill `aquelarre-qa-appium`; no bloquea Gate 2 |
 
 ### Web (React)
 

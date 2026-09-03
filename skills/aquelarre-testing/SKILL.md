@@ -43,7 +43,7 @@ Hacer verificable el trabajo antes del PR/merge: plan antes de implementar, evid
    - comandos ejecutados
    - resultado PASS/FAIL
    - link a CI (Bitrise, GitHub Actions, etc.) si existe
-5. **Evidencia visual** (smoke, Appium, Mobile MCP, capturas): solo en `docs/testing/evidence/` (gitignored). Ver `reference.md` y `docs/testing/EVIDENCE_LOCAL.md` del proyecto.
+5. **Evidencia visual / Appium / Maestro:** opcional. No es requisito de Gate 2. Si el humano pide dispositivo o reproducción, invocar `aquelarre-qa-automation` (router) → `aquelarre-qa-appium` o `aquelarre-qa-react-native`. Capturas solo en `docs/testing/evidence/` (gitignored).
 6. Para `type=refactor`, incluir pruebas de regresion y tests de arquitectura si cambio de estructura.
 
 ## Cobertura minima por riesgo
@@ -52,7 +52,7 @@ Hacer verificable el trabajo antes del PR/merge: plan antes de implementar, evid
 |--------|-----------------|
 | `low` | unit + lint/formato |
 | `medium` | unit + pruebas en modulos tocados |
-| `high` | unit + integration (+ E2E o smoke documentado) |
+| `high` | unit + integration; E2E/Appium/Maestro **solo si el humano lo pide** (warning, no blocker) |
 
 ## Artefactos
 

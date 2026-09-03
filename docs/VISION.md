@@ -216,7 +216,9 @@ Basado en el prototipo `examples/mitaller-skills/`, extendido para Aquelarre:
 | `aquelarre-docker` | Contenedores, compose, entornos (web/backend) | Dev / Infra |
 | `aquelarre-bitrise` | Workflows, builds, tests CI, signing, distribución (móvil/tablet) | Dev / CI / Entrega |
 | `aquelarre-testing` | Plan de pruebas, evidencia, Gate 2 | Dev / QA |
-| `aquelarre-qa-automation` | Pruebas realistas, reproducción de bugs | Post-dev / QA |
+| `aquelarre-qa-automation` | Router de pruebas realistas (opt-in, no gate) | Cualquier fase |
+| `aquelarre-qa-appium` | Appium en dispositivo (Flutter/nativo) | Opt-in |
+| `aquelarre-qa-react-native` | E2E RN — Maestro default | Opt-in |
 | `aquelarre-github` | Branch, PR, trazabilidad, merge | Entrega |
 | `aquelarre-refactor` | Refactors opt-in con regresión | Dev (opt-in) |
 

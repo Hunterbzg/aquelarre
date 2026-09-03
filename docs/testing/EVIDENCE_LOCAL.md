@@ -15,6 +15,6 @@ La carpeta **`docs/testing/evidence/`** es **local** y está en `.gitignore`.
 
 ## Relacionado
 
-- Skill: `.cursor/skills/mitaller-testing/` (sección evidencia local)
-- Playbook device: `docs/testing/APPIUM_STAGING_DEVICE_PLAYBOOK.md`
+- Skills: `aquelarre-qa-appium`, `aquelarre-qa-react-native`, `aquelarre-qa-automation`
+- Playbook de dispositivo: el del **proyecto consumidor** (si existe)
 - También ignorado (legado): `/appium_screenshots`

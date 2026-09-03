@@ -39,6 +39,7 @@ Guías paso a paso para el agente; no sustituyen skills ni el SPEC.
 | Onboarding backend (Node) | `workflows/onboarding-node.md` | Proyecto greenfield Node/TypeScript |
 | Implementar backend (router) | `workflows/implement-backend.md` | Elige FastAPI vs Node |
 | Implementar Node | `workflows/implement-node.md` | Task `ready`, stack Node |
+| QA dispositivo (opt-in) | `workflows/qa-device.md` | Appium / Maestro a demanda; no es gate |
 
 Comandos Antigravity (`/discovery`, `/prd`, …): ver `workflows/` y `docs/WORKFLOW_COMMANDS.md`. El instalador copia estos archivos a `.agents/workflows/`.
 
