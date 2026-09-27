@@ -44,8 +44,11 @@ Documentar decisiones irreversibles o de alto impacto antes de implementar, con 
    - **Related** — links a TASK, PRD, UX, SUPA, DB
 3. En refactors de alto riesgo, documentar boundaries afectados y comportamiento que no debe cambiar.
 4. Para cambios de datos distribuidos o cache (si el proyecto los usa), documentar consistencia y rollback — ver `examples.md`.
-5. Linkear ADR desde el task; actualizar status del ADR (`Proposed` → `Accepted`).
-6. **No** imponer patrones del proyecto consumidor desde el harness; leer `docs/architecture/` del repo si existe.
+5. **Al analizar pantallas o mockups (Visual Refinement)**:
+   - Identificar necesidades de infraestructura (Auth, WebSockets, APIs externas, Storage) implícitas en el diseño.
+   - **PREGUNTAR** al humano qué servicio o proveedor usarán para tomar la decisión técnica antes de escribir el ADR.
+6. Linkear ADR desde el task; actualizar status del ADR (`Proposed` → `Accepted`).
+7. **No** imponer patrones del proyecto consumidor desde el harness; leer `docs/architecture/` del repo si existe.
 
 ## Criterios genericos (cuando no hay doc de proyecto)
 

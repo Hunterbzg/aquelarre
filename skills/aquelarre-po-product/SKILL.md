@@ -40,8 +40,11 @@ Traducir necesidades de negocio en requisitos verificables antes de implementaci
    - alcance y no-alcance
    - AC verificables (checklist)
 3. Para `risk=medium|high`, incluir metrica de exito o como se validara el valor entregado.
-4. Linkear PRD desde la seccion de trazabilidad del task (frontmatter `links` o seccion 11).
-5. No duplicar log operativo en el PRD; el task conserva la bitacora de implementacion.
+4. **Al recibir mockups o pantallas visuales (Visual Refinement)**:
+   - Identificar elementos de UI que impliquen reglas de negocio ocultas (ej. botones condicionales, estados de error).
+   - **DETENERSE y PREGUNTAR** al humano por casos límite o flujos no visibles *antes* de asumir reglas o crear el documento. NUNCA inventar flujos alternativos.
+5. Linkear PRD desde la seccion de trazabilidad del task (frontmatter `links` o seccion 11).
+6. No duplicar log operativo en el PRD; el task conserva la bitacora de implementacion.
 
 ## Artefactos
 

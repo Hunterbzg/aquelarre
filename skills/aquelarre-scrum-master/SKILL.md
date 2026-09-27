@@ -45,8 +45,11 @@ Convertir solicitudes en trabajo ejecutable y trazable, sin iniciar codigo fuera
      - `ci`: bitrise | docker | none (derivado de platform cuando aplique)
 3. Si el scope es grande, proponer EPIC/STORY y dividir en tasks con dependencias (`depends_on`, `blocks`).
 4. Verificar trazabilidad: links a branch, PR, PRD, UX, ADR, TEST, DB, Supabase cuando existan.
-5. No mover a `ready` sin cumplir requisitos de Gate 1 (orquestador valida).
-6. Actualizar `status` y `updated_at` en cada transicion; documentar causa si `blocked`.
+5. **Al hacer desglose de pantallas (Visual Refinement)**:
+   - Analizar dependencias visuales e interacciones para proponer Epics y Stories.
+   - Proponer el desglose en el chat primero. **NO CREAR los archivos** hasta que el humano apruebe o ajuste la propuesta.
+6. No mover a `ready` sin cumplir requisitos de Gate 1 (orquestador valida).
+7. Actualizar `status` y `updated_at` en cada transicion; documentar causa si `blocked`.
 
 ## Estados permitidos
 
