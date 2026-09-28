@@ -44,6 +44,8 @@ Convertir solicitudes en trabajo ejecutable y trazable, sin iniciar codigo fuera
      - `tdd`: on | off (off requiere justificacion)
      - `ci`: bitrise | docker | none (derivado de platform cuando aplique)
 3. Si el scope es grande, proponer EPIC/STORY y dividir en tasks con dependencias (`depends_on`, `blocks`).
+   - **REGLA CRÍTICA DE JERARQUÍA:** Los Tasks NUNCA se asignan directamente a un Epic. La jerarquía obligatoria es: `Epic → Story → Task`. Si no hay una Story que agrupe los tasks, crear una antes de crear los tasks.
+   - **Epics Técnicas (sin usuario final):** Usar el formato *"As a developer, I want... so that..."* para sus Stories. NO omitir la Story aunque sea infraestructura.
 4. Verificar trazabilidad: links a branch, PR, PRD, UX, ADR, TEST, DB, Supabase cuando existan.
 5. **Al hacer desglose de pantallas (Visual Refinement)**:
    - Analizar dependencias visuales e interacciones para proponer Epics y Stories.
